@@ -15,8 +15,8 @@
         <h3>Telepon</h3>
         <p>Telepon 1: +62 821-6017-1868</p>
         <p>Telepon 2: +62 821-6619-9170</p>
-        <p>WhatsApp 1: +62 821-6017-1868 |</p>
-        <p>WhatsApp 1: +62 821-6619-9170 |</p>
+        <p>WhatsApp 1: +62 821-6017-1868</p>
+        <p>WhatsApp 1: +62 821-6619-9170</p>
         <p>Email: pondokchristian@gmail.com</p>
         <PondokWhatsappButton phoneNumber="6282160171868" message="Halo Kak saya ingin bertanya..." />
       </div>

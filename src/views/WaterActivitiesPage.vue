@@ -30,7 +30,7 @@
       </div>
       <div class="activity-item">
         <img src="../assets/ban-renang.jpg" alt="Ban Renang" />
-        <h3>Ban Renang Doble</h3>
+        <h3>Ban Renang Double</h3>
         <p>Bersantai dan bermain di tepi pantai dengan ban renang yang nyaman. Ban ini memiliki kapasitas untuk 2 orang anak-anak/ 1 orang dewasa.</p>
         <span class="price"> Rp 25.000/pcs</span>
       </div>

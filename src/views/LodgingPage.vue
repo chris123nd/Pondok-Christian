@@ -26,7 +26,7 @@
       </div>
       <div class="room-item">
         <img src="../assets/room3.jpg" alt="Family Suite" />
-        <h3>Doble Room</h3>
+        <h3>Double Room</h3>
         <ul>
           <li>Kapasitas: 20-30 orang</li>
           <li>Fasilitas: 2 Kipas Angin, 3 Kamar Mandi Dalam, Exra Bed, Dapur, Pondok dekat pantai, Alat Pemanggang, Karaaoke.</li>
