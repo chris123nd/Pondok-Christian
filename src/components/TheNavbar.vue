@@ -52,7 +52,7 @@ export default {
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 70px;
+  height: 50px;
 }
 
 .navbar-brand {
@@ -93,7 +93,7 @@ export default {
 .navbar-links a {
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-size: 1.3em;
+  font-size: 1.1em;
   transition: color 0.3s ease;
   padding: 5px 0;
 }
@@ -117,7 +117,7 @@ export default {
   display: block;
   width: 100%;
   height: 3px;
-  background-color: white;
+  background-color: black;
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
 }
