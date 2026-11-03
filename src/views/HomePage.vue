@@ -1,8 +1,8 @@
 <template>
   <div class="home-page">
     <div class="hero-section">
-      <h1>Selamat Datang di Pondok Christian</h1>
-      <p>Temukan Surga Tersembunyi di Tepi Danau Toba!</p>
+      <h1>{{ heroTitle }}</h1>
+      <p>{{ heroDescription }}</p>
       <p>
         Siapkan diri Anda untuk liburan penuh aksi dan ketenangan di Pondok Christian! Dari serunya banana boat, tur kapal keliling danau, lezatnya makanan & minuman hingga kenyamanan menginap di tempat kami. Setiap momen di sini dirancang
         untuk kebahagiaan anda. Ajak keluarga dan teman, mari jelajahi keajaiban Danau Toba bersama kami. Kami Tunggu kedatangan Anda!
@@ -45,8 +45,22 @@
 </template>
 
 <script>
+import { supabase } from "../lib/supabase";
+
 export default {
   name: "HomePage",
+  data: () => ({
+    heroTitle: "Selamat Datang di Pondok Christian",
+    heroDescription: "Temukan Surga Tersembunyi di Tepi Danau Toba!",
+  }),
+  async mounted() {
+    if (!supabase) return;
+    const { data } = await supabase.from("site_content").select("title, content").eq("slug", "home").single();
+    if (data) {
+      this.heroTitle = data.title || this.heroTitle;
+      this.heroDescription = data.content || this.heroDescription;
+    }
+  },
 };
 </script>
 
