@@ -10,6 +10,7 @@
         <p v-if="error" class="error">{{ error }}</p>
         <button :disabled="loading" type="submit">{{ loading ? 'Memproses…' : 'Masuk' }}</button>
       </form>
+      <router-link class="signup-link" to="/admin/signup">Belum punya akun? Daftar</router-link>
     </div>
   </section>
 </template>

@@ -8,6 +8,7 @@ import LodgingPage from "../views/LodgingPage.vue";
 import GalleryPage from "../views/GalleryPage.vue";
 import ContactPage from "../views/ContactPage.vue";
 import AdminLogin from "../views/AdminLogin.vue";
+import AdminSignup from "../views/AdminSignup.vue";
 import AdminDashboard from "../views/AdminDashboard.vue";
 
 const routes = [
@@ -42,6 +43,7 @@ const routes = [
     component: ContactPage,
   },
   { path: "/admin/login", name: "AdminLogin", component: AdminLogin },
+  { path: "/admin/signup", name: "AdminSignup", component: AdminSignup },
   { path: "/admin", name: "AdminDashboard", component: AdminDashboard },
 ];
 
