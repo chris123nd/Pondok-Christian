@@ -7,6 +7,8 @@ import WaterActivitiesPage from "../views/WaterActivitiesPage.vue";
 import LodgingPage from "../views/LodgingPage.vue";
 import GalleryPage from "../views/GalleryPage.vue";
 import ContactPage from "../views/ContactPage.vue";
+import AdminLogin from "../views/AdminLogin.vue";
+import AdminDashboard from "../views/AdminDashboard.vue";
 
 const routes = [
   {
@@ -39,6 +41,8 @@ const routes = [
     name: "Contact",
     component: ContactPage,
   },
+  { path: "/admin/login", name: "AdminLogin", component: AdminLogin },
+  { path: "/admin", name: "AdminDashboard", component: AdminDashboard },
 ];
 
 const router = createRouter({

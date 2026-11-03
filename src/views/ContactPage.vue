@@ -28,6 +28,14 @@
       </div>
     </div>
 
+    <form class="contact-form" @submit.prevent="submitInquiry">
+      <h3>Kirim Pertanyaan</h3>
+      <input v-model="form.name" placeholder="Nama" required />
+      <input v-model="form.email" type="email" placeholder="Email" required />
+      <textarea v-model="form.message" placeholder="Pesan Anda" rows="4" required></textarea>
+      <button type="submit">{{ sent ? "Pesan terkirim" : "Kirim pesan" }}</button>
+    </form>
+
     <h3>Temukan Kami di Peta</h3>
     <div class="map-container">
       <iframe
@@ -46,11 +54,18 @@
 
 <script>
 import PondokWhatsappButton from "../components/PondokWhatsappButton.vue";
+import { supabase } from "../lib/supabase";
 
 export default {
   name: "ContactPage", // Nama komponen sudah sesuai dengan aturan linter
-  components: {
-    PondokWhatsappButton,
+  components: { PondokWhatsappButton },
+  data: () => ({ form: { name: "", email: "", message: "" }, sent: false }),
+  methods: {
+    async submitInquiry() {
+      if (!supabase) return;
+      const { error } = await supabase.from("inquiries").insert(this.form);
+      if (!error) { this.sent = true; this.form = { name: "", email: "", message: "" }; }
+    },
   },
 };
 </script>
