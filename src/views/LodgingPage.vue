@@ -1,38 +1,41 @@
 <template>
   <div class="page-section lodging-page">
-    <h2>Penginapan Nyaman di Homestay Christian</h2>
-    <p class="description">Rasakan kenyamanan menginap di tepi Danau Toba. Pondok Christian menawarkan pilihan kamar yang bersih dan nyaman, dilengkapi fasilitas lengkap untuk istirahat Anda.</p>
+    <header class="page-heading">
+      <p class="eyebrow">Istirahat dengan pemandangan</p>
+      <h2>Penginapan Nyaman di Homestay Christian</h2>
+      <p class="description">Rasakan kenyamanan menginap di tepi Danau Toba. Pondok Christian menawarkan pilihan kamar yang bersih dan nyaman, dilengkapi fasilitas lengkap untuk istirahat Anda.</p>
+    </header>
 
     <div class="rooms-grid">
       <div class="room-item">
-        <img src="../assets/room1.jpg" alt="Kamar Standard" />
+        <img src="../assets/room1.jpg" alt="Kamar Mini Room" />
         <h3>Mini Room</h3>
         <ul>
           <li>Kapasitas: 2-3 orang</li>
-          <li>Fasilitas: 1 Kamar Mandi Dalam, Kipas Angin Sedang, 1 Ekstra Bed</li>
-          <li>Pemandangan: View Danau Toba</li>
+          <li>1 kamar mandi dalam, kipas angin, 1 ekstra bed</li>
+          <li>Pemandangan Danau Toba</li>
         </ul>
-        <span class="price"> Rp 250.000/malam</span>
+        <span class="price">Rp 250.000/malam</span>
       </div>
       <div class="room-item">
-        <img src="../assets/room2.jpg" alt="Kamar Deluxe" />
+        <img src="../assets/room2.jpg" alt="Kamar Standard Room" />
         <h3>Standard Room</h3>
         <ul>
           <li>Kapasitas: 10-15 orang</li>
-          <li>Fasilitas: 2 Kipas Angin, 2 Kamar Mandi Dalam, Exra Bed, Dapur, Pondok dekat pantai, Alat Pemanggang, Karaoke.</li>
-          <li>Pemandangan: Danau Toba Langsung</li>
+          <li>2 kipas angin, 2 kamar mandi, dapur, ekstra bed</li>
+          <li>Pemandangan Danau Toba langsung</li>
         </ul>
         <span class="price">Mulai Rp 600.000/malam</span>
       </div>
       <div class="room-item">
-        <img src="../assets/room3.jpg" alt="Family Suite" />
+        <img src="../assets/room3.jpg" alt="Kamar Double Room" />
         <h3>Double Room</h3>
         <ul>
           <li>Kapasitas: 20-30 orang</li>
-          <li>Fasilitas: 2 Kipas Angin, 3 Kamar Mandi Dalam, Exra Bed, Dapur, Pondok dekat pantai, Alat Pemanggang, Karaaoke.</li>
-          <li>Pemandangan: Danau Toba Langsung</li>
+          <li>3 kamar mandi, dapur, ekstra bed, alat pemanggang</li>
+          <li>Pemandangan Danau Toba langsung</li>
         </ul>
-        <span class="price"> Rp 1.200.000/malam</span>
+        <span class="price">Rp 1.200.000/malam</span>
       </div>
     </div>
 
@@ -42,90 +45,30 @@
 </template>
 
 <script>
-import PondokWhatsappButton from "../components/PondokWhatsappButton.vue"; // Diubah namanya
+import PondokWhatsappButton from "../components/PondokWhatsappButton.vue";
 
 export default {
-  name: "LodgingPage", // Diubah namanya
-  components: {
-    PondokWhatsappButton,
-  },
+  name: "LodgingPage",
+  components: { PondokWhatsappButton },
 };
 </script>
 
 <style scoped>
-.lodging-page {
-  background-color: #f0f8ff; /* Biru sangat muda */
-}
-
-.rooms-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 40px auto;
-}
-
-.room-item {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 25px;
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.room-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.room-item img {
-  width: 100%;
-  height: 220px; /* Tinggi gambar fixed */
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.room-item h3 {
-  color: #3f51b5;
-  font-size: 1.8em;
-  margin-bottom: 15px;
-}
-
-.room-item ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-.room-item ul li {
-  margin-bottom: 8px;
-  color: #666;
-  font-size: 0.95em;
-  display: flex;
-  align-items: center;
-}
-
-.room-item ul li::before {
-  content: "✔";
-  color: #25d366; /* Warna hijau */
-  margin-right: 10px;
-  font-weight: bold;
-}
-
-.room-item .price {
-  display: block;
-  font-weight: bold;
-  color: #ffc107;
-  font-size: 1.2em;
-  margin-top: 15px;
-  text-align: right;
-}
-
-@media (max-width: 768px) {
-  .rooms-grid {
-    grid-template-columns: 1fr;
-  }
-}
+.lodging-page { background: var(--color-bg); }
+.page-heading { max-width: 720px; margin: 0 auto; text-align: center; }
+.page-heading h2 { margin: 0; color: var(--color-ink); font: 500 clamp(2.25rem, 5vw, 4rem)/1.05 "Playfair Display", Georgia, serif; letter-spacing: -.04em; }
+.eyebrow { margin: 0 0 1rem; color: var(--color-accent-strong); text-transform: uppercase; letter-spacing: .18em; font-size: .72rem; font-weight: 700; }
+.description { max-width: 620px; margin: 1.25rem auto 0; color: var(--color-muted); line-height: 1.75; }
+.rooms-grid { max-width: 1180px; margin: 3.5rem auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.room-item { display: flex; flex-direction: column; padding: 1rem; background: var(--color-surface); border: 1px solid var(--color-line); border-radius: var(--radius-lg); box-shadow: 0 10px 35px rgba(32, 48, 47, .06); transition: transform .3s ease, box-shadow .3s ease; }
+.room-item:hover { transform: translateY(-7px); box-shadow: var(--shadow-soft); }
+.room-item img { width: 100%; height: 220px; object-fit: cover; border-radius: calc(var(--radius-lg) - 8px); }
+.room-item h3 { margin: 1.25rem .5rem .75rem; color: var(--color-ink); font: 600 1.5rem/1.1 "Playfair Display", Georgia, serif; }
+.room-item ul { flex: 1; margin: 0 .5rem; padding: 0; list-style: none; color: var(--color-muted); font-size: .92rem; line-height: 1.65; }
+.room-item li { display: flex; gap: .6rem; margin: .55rem 0; }
+.room-item li::before { content: "•"; color: var(--color-accent); font-weight: 700; }
+.price { display: block; margin: 1.25rem .5rem .5rem; color: var(--color-accent-strong); font-weight: 700; }
+.whatsapp-prompt { max-width: 580px; margin: 0 auto 1.25rem; color: var(--color-muted); text-align: center; line-height: 1.7; }
+:deep(.whatsapp-button) { display: flex; justify-content: center; margin: 0 auto; }
+@media (max-width: 760px) { .rooms-grid { grid-template-columns: 1fr; margin-top: 2.5rem; } .page-heading h2 { font-size: 2.5rem; } }
 </style>
