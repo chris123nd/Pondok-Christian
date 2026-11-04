@@ -1,0 +1,18 @@
+:root {
+  --color-bg: #f4f1eb;
+  --color-surface: #fffdf8;
+  --color-ink: #1e2a2b;
+  --color-muted: #687576;
+  --color-accent: #b8754b;
+  --color-accent-strong: #8d5033;
+  --color-line: rgba(30, 42, 43, 0.12);
+  --shadow-soft: 0 18px 50px rgba(30, 42, 43, 0.1);
+  --radius-lg: 24px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--color-bg); color: var(--color-ink); font-family: "Avenir Next", "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+::selection { background: rgba(184, 117, 75, 0.22); }

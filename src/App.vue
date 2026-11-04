@@ -22,47 +22,9 @@ export default {
 </script>
 
 <style>
-/* Styling dasar global untuk seluruh aplikasi */
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-#app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Pastikan aplikasi mengisi tinggi layar */
-}
-
-main {
-  flex: 1; /* Pastikan konten utama mengisi ruang yang tersedia */
-}
-
-/* Styling umum untuk semua halaman konten */
-.page-section {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.page-section h2 {
-  color: #3f51b5;
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  border-bottom: 3px solid #ffc107;
-  display: inline-block;
-  padding-bottom: 10px;
-}
-
-.page-section p.description {
-  max-width: 800px;
-  margin: 0 auto 40px auto;
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #555;
-}
+#app { display: flex; flex-direction: column; min-height: 100vh; }
+main { flex: 1; }
+.page-section { padding: clamp(4rem, 9vw, 7rem) clamp(1.25rem, 5vw, 5rem); }
+.page-section h2 { color: var(--color-ink); font-family: Georgia, serif; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 400; margin: 0 0 1rem; letter-spacing: -0.04em; }
+.page-section p.description { max-width: 720px; margin: 0 auto 2.5rem; color: var(--color-muted); font-size: 1.05rem; line-height: 1.8; }
 </style>

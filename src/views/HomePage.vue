@@ -1,203 +1,42 @@
 <template>
   <div class="home-page">
-    <div class="hero-section">
-      <h1>Selamat Datang di Pondok Christian</h1>
-      <p>Temukan Surga Tersembunyi di Tepi Danau Toba!</p>
-      <p>
-        Siapkan diri Anda untuk liburan penuh aksi dan ketenangan di Pondok Christian! Dari serunya banana boat, tur kapal keliling danau, lezatnya makanan & minuman hingga kenyamanan menginap di tempat kami. Setiap momen di sini dirancang
-        untuk kebahagiaan anda. Ajak keluarga dan teman, mari jelajahi keajaiban Danau Toba bersama kami. Kami Tunggu kedatangan Anda!
-      </p>
-      <router-link to="/contact" class="btn-primary">Hubungi Kami</router-link>
-    </div>
+    <section class="hero-section">
+      <div class="hero-copy">
+        <p class="eyebrow">Pondok Christian · Lumban Bul Bul</p>
+        <h1>Temukan tenang yang <em>sebenarnya.</em></h1>
+        <p class="hero-description">Tempat kecil untuk menikmati Danau Toba dengan cara yang lebih dekat, hangat, dan berkesan.</p>
+        <div class="hero-actions">
+          <router-link to="/contact" class="btn-primary">Rencanakan kunjungan <span>↗</span></router-link>
+          <router-link to="/gallery" class="text-link">Lihat suasana</router-link>
+        </div>
+      </div>
+      <div class="hero-note"><span>01</span><p>Danau Toba<br />North Sumatra</p></div>
+    </section>
 
-    <section class="page-section about-summary">
-      <h2>Tentang Kami</h2>
-      <p class="description">
-        Kami menawarkan pengalaman liburan yang tak terlupakan di tepi Danau Toba. Dengan suasana yang tenang, pemandangan Danau Toba yang memukau, dan fasilitas lengkap, kami siap melayani kebutuhan Anda untuk rekreasi dan relaksasi.
-      </p>
-      <router-link to="/contact" class="btn-secondary">Lihat Lebih Lanjut</router-link>
+    <section class="page-section intro-section">
+      <div class="section-heading"><p class="eyebrow">Cara kami menyambut Anda</p><h2>Lebih dari sekadar tempat menginap.</h2></div>
+      <p class="description">Nikmati pagi yang pelan, air yang jernih, makanan lokal yang hangat, serta keramahan yang membuat Anda ingin kembali lagi.</p>
     </section>
 
     <section class="page-section services-summary">
-      <h2>Layanan Kami</h2>
+      <div class="section-heading centered"><p class="eyebrow">Pengalaman di sini</p><h2>Isi hari Anda dengan hal-hal sederhana.</h2></div>
       <div class="services-grid">
-        <div class="service-item">
-          <img src="../assets/food-icon.png" alt="Makanan Icon" />
-          <h3>Kuliner Lokal</h3>
-          <p>Habis berenang bikin perut jadi lapar? Tenang ada warung nya yang menjual berbagai macam makanan dan minuman yang bisa menghilangkan laparmu.</p>
-          <router-link to="/food" class="link-more">Lihat Menu</router-link>
-        </div>
-        <div class="service-item">
-          <img src="../assets/water-activities-icon.png" alt="Wahana Air Icon" />
-          <h3>Wahana Air</h3>
-          <p>Rasakan adrenalin dengan banana boat, kapal keliling,kayak dan ban renang yang sangat seru dan pastinya harganya ramah di kantong.</p>
-          <router-link to="/water-activities" class="link-more">Info Wahana</router-link>
-        </div>
-        <div class="service-item">
-          <img src="../assets/lodging-icon.png" alt="Penginapan Icon" />
-          <h3>Penginapan Nyaman</h3>
-          <p>Bersantai di kamar kami yang bersih dan nyaman dengan pemandangan area sekitar yang dekat langsung dengan danau toba yang indah.</p>
-          <router-link to="/lodging" class="link-more">Pesan Kamar</router-link>
-        </div>
+        <router-link to="/food" class="service-item"><span class="service-number">01</span><img src="../assets/food-icon.png" alt="" /><h3>Kuliner lokal</h3><p>Rasa rumahan yang menemani hari Anda di tepi danau.</p><span class="link-more">Jelajahi menu <b>↗</b></span></router-link>
+        <router-link to="/water-activities" class="service-item service-featured"><span class="service-number">02</span><img src="../assets/water-activities-icon.png" alt="" /><h3>Wahana air</h3><p>Naikkan energi dengan petualangan seru untuk semua usia.</p><span class="link-more">Lihat aktivitas <b>↗</b></span></router-link>
+        <router-link to="/lodging" class="service-item"><span class="service-number">03</span><img src="../assets/lodging-icon.png" alt="" /><h3>Penginapan nyaman</h3><p>Ruang istirahat yang tenang, bersih, dan terasa seperti rumah.</p><span class="link-more">Pilih kamar <b>↗</b></span></router-link>
       </div>
     </section>
+
+    <section class="quote-section"><p>“Di sini, waktu terasa berjalan lebih lambat.”</p><router-link to="/contact" class="btn-secondary">Mari berkenalan</router-link></section>
   </div>
 </template>
 
 <script>
-export default {
-  name: "HomePage",
-};
+export default { name: "HomePage" };
 </script>
 
 <style scoped>
-.home-page {
-  /* Tidak perlu background-color lagi di sini, karena hero-section yang akan punya */
-  /* min-height disesuaikan di App.vue main */
-}
-
-.hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/hero-bg.jpg") no-repeat center center; /* Ganti nama file gambar Anda */
-  background-size: cover;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  padding: 100px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 60vh;
-  text-align: center;
-}
-
-.hero-section h1 {
-  font-size: 3.5em;
-  margin-bottom: 20px;
-}
-
-.hero-section p {
-  font-size: 1.4em;
-  max-width: 800px;
-  margin-bottom: 30px;
-  line-height: 1.5;
-}
-
-.btn-primary {
-  background-color: rgb(255, 255, 255);
-  color: #3f51b5;
-  padding: 15px 30px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.2em;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-primary:hover {
-  background-color: rgb(255, 255, 255);
-  transform: translateY(-2px);
-}
-
-.about-summary {
-  background-color: #f8f8f8;
-  color: #2c3e50;
-}
-
-.about-summary h2 {
-  color: #3f51b5;
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: #3f51b5;
-  border: 2px solid #3f51b5;
-  padding: 12px 25px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  margin-top: 20px;
-  display: inline-block;
-}
-
-.btn-secondary:hover {
-  background-color: #3f51b5;
-  color: white;
-}
-
-.services-summary {
-  background-color: white;
-  padding-bottom: 60px;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
-  margin: 40px auto;
-}
-
-.service-item {
-  background-color: #e8eaf6; /* Biru muda */
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
-}
-
-.service-item img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 20px;
-}
-
-.service-item h3 {
-  color: #3f51b5;
-  font-size: 1.6em;
-  margin-bottom: 15px;
-}
-
-.service-item p {
-  color: #666;
-  font-size: 1em;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-.link-more {
-  color: #3f51b5;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.link-more:hover {
-  color: rgb(255, 255, 255);
-}
-
-/* Media Queries untuk responsif */
-@media (max-width: 768px) {
-  .hero-section h1 {
-    font-size: 2.5em;
-  }
-  .hero-section p {
-    font-size: 1.1em;
-  }
-  .btn-primary {
-    padding: 10px 20px;
-    font-size: 1em;
-  }
-  .page-section h2 {
-    font-size: 2em;
-  }
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-}
+.hero-section { min-height: 78vh; padding: clamp(7rem, 15vw, 11rem) clamp(1.25rem, 7vw, 8rem) 5rem; display: flex; align-items: flex-end; position: relative; overflow: hidden; color: white; background: linear-gradient(90deg, rgba(18, 31, 31, .78), rgba(18, 31, 31, .15)), url("../assets/hero-bg.jpg") center/cover; }
+.hero-copy { max-width: 680px; position: relative; z-index: 1; }.eyebrow { margin: 0 0 1.25rem; text-transform: uppercase; letter-spacing: .18em; font-size: .72rem; font-weight: 700; color: var(--color-accent); }.hero-section .eyebrow { color: #e9c9a9; }.hero-section h1 { margin: 0; font: 400 clamp(3.5rem, 8vw, 7rem)/.93 Georgia, serif; letter-spacing: -.06em; max-width: 720px; }.hero-section h1 em { color: #e6bd96; }.hero-description { max-width: 470px; margin: 2rem 0; color: rgba(255,255,255,.8); font-size: 1.08rem; line-height: 1.7; }.hero-actions { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }.btn-primary, .btn-secondary { display: inline-flex; align-items: center; gap: 1rem; padding: 1rem 1.35rem; border-radius: 999px; text-decoration: none; font-weight: 700; transition: transform .25s, background .25s; }.btn-primary { background: #fffaf2; color: var(--color-ink); }.btn-primary:hover, .btn-secondary:hover { transform: translateY(-3px); }.text-link { color: white; text-underline-offset: 5px; }.hero-note { position: absolute; right: 7vw; top: 22%; border-left: 1px solid rgba(255,255,255,.5); padding-left: 1rem; color: rgba(255,255,255,.72); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }.hero-note span { color: #e6bd96; }.hero-note p { line-height: 1.7; }.intro-section { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: end; max-width: 1180px; margin: auto; }.intro-section h2 { max-width: 520px; }.intro-section .description { margin: 0; max-width: 430px; }.centered { text-align: center; }.services-summary { background: var(--color-surface); }.services-grid { max-width: 1180px; margin: 3rem auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }.service-item { position: relative; padding: 2.25rem; min-height: 355px; display: flex; flex-direction: column; align-items: flex-start; border: 1px solid var(--color-line); border-radius: var(--radius-lg); text-decoration: none; transition: transform .3s, box-shadow .3s; }.service-item:hover { transform: translateY(-8px); box-shadow: var(--shadow-soft); }.service-featured { background: #dce4dc; border-color: transparent; }.service-number { align-self: flex-end; color: var(--color-muted); font-size: .78rem; }.service-item img { width: 48px; height: 48px; object-fit: contain; margin: 1.5rem 0; }.service-item h3 { margin: 0 0 .75rem; font: 400 1.8rem Georgia, serif; }.service-item p { color: var(--color-muted); line-height: 1.6; margin: 0; }.link-more { margin-top: auto; color: var(--color-accent-strong); font-size: .9rem; font-weight: 700; }.link-more b { margin-left: .35rem; }.quote-section { padding: 6rem 1.25rem; text-align: center; background: #233638; color: white; }.quote-section p { margin: 0 auto 2rem; font: 400 clamp(2rem, 4vw, 3.8rem) Georgia, serif; letter-spacing: -.04em; }.btn-secondary { border: 1px solid rgba(255,255,255,.45); color: white; }
+@media (max-width: 760px) { .hero-section { min-height: 82vh; padding: 7rem 1.25rem 3rem; }.hero-note { display: none; }.intro-section, .services-grid { grid-template-columns: 1fr; gap: 2rem; }.intro-section .description { margin: 0; }.service-item { min-height: 300px; } }
 </style>
