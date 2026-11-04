@@ -60,7 +60,27 @@ export default {
 
 <style scoped>
 .water-activities-page {
-  background-color: #e8eaf6; /* Biru muda */
+  background: var(--color-surface);
+  text-align: center;
+}
+
+.water-activities-page > h2 {
+  color: var(--color-ink);
+}
+
+.water-activities-page > .description {
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+.whatsapp-prompt {
+  max-width: 620px;
+  margin: 0 auto 1.25rem;
+  color: var(--color-muted);
+}
+
+.water-activities-page :deep(.whatsapp-button) {
+  margin-inline: auto;
 }
 
 .activities-grid {

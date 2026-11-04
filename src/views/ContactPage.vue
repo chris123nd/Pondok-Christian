@@ -57,7 +57,22 @@ export default {
 
 <style scoped>
 .contact-page {
-  background-color: #f0f0f0; /* Abu-abu sangat terang */
+  background: var(--color-surface);
+  text-align: center;
+}
+
+.contact-page > h2 {
+  color: var(--color-ink);
+}
+
+.contact-page > .description {
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+.contact-page > h3 {
+  color: var(--color-ink);
+  margin-bottom: 1.5rem;
 }
 
 .contact-info-grid {
@@ -89,7 +104,7 @@ export default {
 }
 
 .contact-item h3 {
-  color: #3f51b5;
+  color: var(--color-accent);
   font-size: 1.6em;
   margin-bottom: 15px;
 }
@@ -102,7 +117,7 @@ export default {
 }
 
 .contact-item .link-more {
-  color: #3f51b5;
+  color: var(--color-accent);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
